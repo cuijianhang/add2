@@ -42,9 +42,10 @@ class ViewController: UIViewController {
         
         let value = sender.currentTitle
         
-        if value == "+" || value == "-" || value == "×" || value == "÷" ||
+        if value == "+" || value == "-" || value == "×" || value == "÷"
         {
-            print("\(value)")
+            //print("\(value)")
+            operator = value
         }
         else
         {
