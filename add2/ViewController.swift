@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var operand2 :String = ""
     
     //存储运算符字符串
-    var operator :String = ""
+    var operator1 :String = ""
     
     
     
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     
     
 
+
     //设置命令
     @IBAction func didClicked(sender: UIButton) {
         //获取按钮名称
@@ -44,15 +45,52 @@ class ViewController: UIViewController {
         
         if value == "+" || value == "-" || value == "×" || value == "÷"
         {
-            //print("\(value)")
-            operator = value
+            operator1 = value!
+            return
+        }
+        else if value == "="
+        {
+            
+            
+            var result = 0
+            switch operator1
+            {
+            case "+":
+                result = Int(operand1)! + Int(operand2)!
+                //result = operand1.toInt()! + operand2.toInt()!
+            
+            case "-":
+                result = Int(operand1)! - Int(operand2)!
+                
+            case "×":
+                result = Int(operand1)! * Int(operand2)!
+                
+            case "÷":
+                result = Int(operand1)! / Int(operand2)!
+            
+                
+            case "C":
+                result = 0
+                
+            default:
+                result = 0
+            }
+            
+            resultLabel.text = "\(result)"
+            return
+        }
+        
+        if operator1 == ""
+        {
+            operand1 = operand1 + value!
+            resultLabel.text = operand1
         }
         else
         {
-            print("no value")
+            operand2 = operand2 + value!
+            resultLabel.text = operand2
+
         }
-        
-        
         
     }
     

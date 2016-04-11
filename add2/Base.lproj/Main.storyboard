@@ -170,7 +170,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="C"/>
                                 <connections>
-                                    <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zd5-Dz-iwa"/>
+                                    <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPi-se-MmM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adq-ba-Yke">
